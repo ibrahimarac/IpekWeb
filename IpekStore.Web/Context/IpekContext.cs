@@ -1,5 +1,6 @@
 ﻿using IpekStore.Web.DbMappings;
 using IpekStore.Web.Models.Entities;
+using IpekStore.Web.Seeder;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,13 @@ namespace IpekStore.Web.Context
         {
             //CategoryMapping
             modelBuilder.ApplyConfiguration(new CategoryMapping());
-
             //ProductMapping
             modelBuilder.ApplyConfiguration(new ProductMapping());
 
+            //Category Data Seeding
+            modelBuilder.SeedCategories();
+            //Product Data Seeding
+            modelBuilder.SeedProducts();
         }
 
     }

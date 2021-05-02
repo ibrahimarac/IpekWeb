@@ -8,34 +8,19 @@ using System.Threading.Tasks;
 
 namespace IpekStore.Web.DbMappings
 {
-    public class ProductMapping : IEntityTypeConfiguration<Product>
+    public class ProductMapping : AuditableEntityMapping<Product>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public override void Configure(EntityTypeBuilder<Product> builder)
         {
-            //Burada Product ve miras aldığı AuditableEntity sınıflarından
-            //gelecek property'ler için mapping tanımlamaları yapılıyor.
-            //CategoryId için özel bir mapping yapmadık. Özel mapping işlemi
-            //yapmadığımız property'ler için EF varsayılan türleri kullanır.
+            //Product sınıfının miras aldığı Auditable Entity türünden
+            //gelecek Property'ler veritabanına map leniyor.
+            base.Configure(builder);
 
-            builder
-                .Property(p => p.Id)
-                .UseIdentityColumn();
-            builder
-                .HasKey(p => p.Id);
 
+            //Product Entity'nin kendisine ait Propertyler map leniyor.            
             builder
                 .Property(p => p.Name)
                 .HasColumnType("varchar(150)")
-                .IsRequired();
-
-            builder
-                .Property(p => p.CreateUser)
-                .HasColumnType("varchar(10)")
-                .IsRequired();
-
-            builder
-                .Property(p => p.LastupUser)
-                .HasColumnType("varchar(10)")
                 .IsRequired();
 
             //Birden çoğa ilişki kuruluyor

@@ -8,31 +8,18 @@ using System.Threading.Tasks;
 
 namespace IpekStore.Web.DbMappings
 {
-    public class CategoryMapping : IEntityTypeConfiguration<Category>
+    public class CategoryMapping : AuditableEntityMapping<Category>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public override void Configure(EntityTypeBuilder<Category> builder)
         {
-            //Burada Category ve miras aldığı AuditableEntity sınıflarından
-            //gelecek property'ler için mapping tanımlamaları yapılıyor.
-            builder
-                .Property(c => c.Id)
-                .UseIdentityColumn();
-            builder
-                .HasKey(c => c.Id);
+            //Category sınıfının miras aldığı Auditable Entity türünden
+            //gelecek Property'ler veritabanına map leniyor.
+            base.Configure(builder);
 
+            //Category Entity'nin kendisine ait Propertyler map leniyor.
             builder
                 .Property(c => c.Name)
                 .HasColumnType("varchar(30)")
-                .IsRequired();
-
-            builder
-                .Property(c => c.CreateUser)
-                .HasColumnType("varchar(10)")
-                .IsRequired();
-
-            builder
-                .Property(c => c.LastupUser)
-                .HasColumnType("varchar(10)")
                 .IsRequired();
 
             builder

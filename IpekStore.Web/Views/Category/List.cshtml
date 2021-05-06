@@ -4,10 +4,13 @@
     ViewData["Title"] = "List";
 }
 
+
+
+
 <h1>Kayıtlı Kategoriler</h1>
 
 <p class="text-right">
-    <a asp-action="Create">Yeni Kategori</a>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa fa-plus"></i></a>
 </p>
 
 <table class="table table-bordered table-striped">
@@ -32,9 +35,12 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a asp-controller="Category" asp-action="Edit" class="btn btn-success">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a asp-controller="Category" asp-action="Delete" class="btn btn-danger">
+                    <i class="fa fa-trash"></i>
+                </a>
             </td>
         </tr>
 }

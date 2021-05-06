@@ -1,9 +1,8 @@
 ﻿@model IEnumerable<IpekStore.Web.Models.VM.CategoryVM>
 
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Kayıtlı Kategoriler";
 }
-
 
 
 
@@ -35,10 +34,16 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a asp-controller="Category" asp-action="Edit" class="btn btn-success">
+                <a asp-controller="Category" 
+                   asp-action="Edit" 
+                   asp-route-id="@item.Id"
+                   class="btn btn-success">
                     <i class="fa fa-edit"></i>
                 </a>
-                <a asp-controller="Category" asp-action="Delete" class="btn btn-danger">
+                <a asp-controller="Category" 
+                   asp-action="Delete" 
+                   asp-route-id="@item.Id"
+                   class="btn btn-danger">
                     <i class="fa fa-trash"></i>
                 </a>
             </td>

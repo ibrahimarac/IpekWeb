@@ -27,5 +27,16 @@ namespace IpekStore.Web.Controllers
                 });
             return View(categories);
         }
+
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        public IActionResult Delete(int id)
+        {
+            return View();
+        }
+
     }
 }

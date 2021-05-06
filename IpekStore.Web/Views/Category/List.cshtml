@@ -4,7 +4,7 @@
     ViewData["Title"] = "Kayıtlı Kategoriler";
 }
 
-
+@using IpekStore.Web.CustomMvcHelpers
 
 <h1>Kayıtlı Kategoriler</h1>
 
@@ -31,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
+                @Html.BoolToTextFor(m=>item.Status,"Aktif","Pasif")
             </td>
             <td>
                 <a asp-controller="Category" 

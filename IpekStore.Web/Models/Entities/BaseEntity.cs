@@ -9,8 +9,6 @@ namespace IpekStore.Web.Models.Entities
 {
     public abstract class BaseEntity
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[Key]
         public int Id { get; set; }
 
         public bool IsActive { get; set; }

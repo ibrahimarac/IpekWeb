@@ -31,14 +31,12 @@ namespace IpekStore.Web.Controllers
         }
 
         [HttpGet]
-        //[AcceptVerbs("GET")]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        //[AcceptVerbs("POST")]
         public IActionResult Create(EditCategoryVM categoryVM)
         {
             if (!ModelState.IsValid)
@@ -58,15 +56,47 @@ namespace IpekStore.Web.Controllers
             return RedirectToAction("List");
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int? id)
         {
-            return View();
+            if (!id.HasValue)
+                return BadRequest("Düzenlenecek kategori numarası gönderilmedi.");
+            //var categoryInDb = _context.Categories.SingleOrDefault(c => c.Id == id);
+            var categoryInDb = _context.Categories.Find(id);
+            if (categoryInDb == null)
+                return NotFound("Belirtilen kategori numarasına karşılık gelen bir kategori bulunamadı.");
+
+            var categoryVM = new EditCategoryVM
+            {
+                Id=categoryInDb.Id,
+                Name=categoryInDb.Name,
+                IsActive=categoryInDb.IsActive
+            };
+
+            return View(categoryVM);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(EditCategoryVM categoryVM)
+        {
+            if (!ModelState.IsValid)
+                return View(categoryVM);
+            //veritabanında yer alan orjinal bilgiler
+            var categoryInDb = _context.Categories.Find(categoryVM.Id);
+            //formdan gelen verilerle veritabanında yer alan kayıt güncelleniyor
+            categoryInDb.Name = categoryVM.Name;
+            categoryInDb.IsActive = categoryVM.IsActive;
+            categoryInDb.LastupUser = "user";
+            categoryInDb.LastupDate = DateTime.Now;
+
+            _context.Categories.Update(categoryInDb);
+            _context.SaveChanges();
+
+            return RedirectToAction("List");
         }
 
         public IActionResult Delete(int id)
         {
             return View();
         }
-
     }
 }

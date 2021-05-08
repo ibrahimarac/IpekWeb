@@ -505,3 +505,4 @@ D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\n
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\IpekStore.Web.csproj.CopyComplete
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\IpekStore.Web.genruntimeconfig.cache
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs

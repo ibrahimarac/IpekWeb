@@ -8562,11 +8562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Kurslar\\16 Ocak\\15. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
+      "projectUniqueName": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
       "projectName": "IpekStore.Web",
-      "projectPath": "D:\\Kurslar\\16 Ocak\\15. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
+      "projectPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
       "packagesPath": "C:\\Users\\Ibrahim\\.nuget\\packages\\",
-      "outputPath": "D:\\Kurslar\\16 Ocak\\15. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\obj\\",
+      "outputPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

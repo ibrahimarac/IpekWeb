@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fW8cuNNjbt6J74V/sj2o48umn48x/qSGw8nDNLLBkO8zHt7bMKrDjJAyYUKdyAFsXsY8vruAVd9Og4QXHVy01A==",
+  "dgSpecHash": "2oUnBeLVe/lD+k+IQZbkptAUmlM8RICe7VdpxaNHEX6nLZl+cXqz7zEfnP5XW7fcf2+kvFxM3zlAOHyQurQ5IQ==",
   "success": true,
   "projectFilePath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.1.0\\fluentvalidation.aspnetcore.10.1.0.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.1.0\\fluentvalidation.dependencyinjectionextensions.10.1.0.nupkg.sha512",
     "C:\\Users\\Ibrahim\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ibrahim\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ibrahim\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

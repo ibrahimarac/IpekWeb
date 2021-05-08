@@ -1,5 +1,10 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using IpekStore.Web.Context;
 using IpekStore.Web.DependencyExtensions;
+using IpekStore.Web.Models.VM.Category;
+using IpekStore.Web.Models.VM.Product;
+using IpekStore.Web.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,12 +31,12 @@ namespace IpekStore.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews()
+            //    .AddFluentValidation(fv=>fv.RegisterValidatorsFromAssemblyContaining(typeof(CategoryValidator)));
 
-            //services.AddDbContext<IpekContext>(opt =>
-            //{
-            //    opt.UseSqlServer(Configuration.GetConnectionString("IpekConnectionLocal"));
-            //});
+            services.AddControllersWithViews()
+                .AddFluentValidation();
+            services.AddFluentValidators();
 
             services.AddSqlServerLocalDbContext();
         }

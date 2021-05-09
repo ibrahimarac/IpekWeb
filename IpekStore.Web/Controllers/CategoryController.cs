@@ -1,5 +1,6 @@
 ﻿using IpekStore.Web.Context;
 using IpekStore.Web.Models.Entities;
+using IpekStore.Web.Models.Globals;
 using IpekStore.Web.Models.VM.Category;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -94,9 +95,33 @@ namespace IpekStore.Web.Controllers
             return RedirectToAction("List");
         }
 
-        public IActionResult Delete(int id)
+        [HttpPost]
+        public JsonResult Delete([FromBody] JDeleteObject objToDelete)
         {
-            return View();
+            if (!objToDelete.Id.HasValue)
+                return Json(new JResult
+                {
+                    Status = Status.BadRequest,
+                    Message = "Silinecek kategori numarası belirlenemedi."
+                }); 
+            var categoryInDb = _context.Categories.Find(objToDelete.Id);
+            if (categoryInDb == null)
+                return Json(new JResult
+                {
+                    Status=Status.NotFound,
+                    Message="Belirtilen kategori numarasına sahip bir kategori bulunamadı."
+                });
+
+            _context.Categories.Remove(categoryInDb);
+            _context.SaveChanges();
+
+            return Json(new JResult
+            {
+                Status = Status.Ok,
+                Message = "Kategori başarıyla silindi.",
+                Result=new CategoryVM { Id=categoryInDb.Id,Name=categoryInDb.Name}
+            });
+
         }
     }
 }

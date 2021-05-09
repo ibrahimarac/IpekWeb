@@ -25,29 +25,58 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.BoolToTextFor(m=>item.Status,"Aktif","Pasif")
-            </td>
-            <td>
-                <a asp-controller="Category" 
-                   asp-action="Edit" 
-                   asp-route-id="@item.Id"
-                   class="btn btn-success">
-                    <i class="fa fa-edit"></i>
-                </a>
-                <a asp-controller="Category" 
-                   asp-action="Delete" 
-                   asp-route-id="@item.Id"
-                   class="btn btn-danger">
-                    <i class="fa fa-trash"></i>
-                </a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.BoolToTextFor(m => item.Status, "Aktif", "Pasif")
+                </td>
+                <td>
+                    <a asp-controller="Category"
+                       asp-action="Edit"
+                       asp-route-id="@item.Id"
+                       class="btn btn-success">
+                        <i class="fa fa-edit"></i>
+                    </a>
+
+                    @*<form asp-action="Delete" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit"><i class="fa fa-trash"></i></button>
+                        </form>*@
+
+                    <a href="#" class="btn btn-danger delete" data-id="@item.Id">
+                        <i class="fa fa-trash"></i>
+                    </a>
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section Scripts{
+    <script>
+        $().ready(function () {
+            $(".delete").click(function () {
+                var deleteId = $(this).data('id');
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Delete","Category")',
+                    contentType: "application/json",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        id: deleteId
+                    }),
+                    success: function (result) {
+                        console.log(result);
+                    }
+            });
+
+            })
+
+        })
+    </script>
+}

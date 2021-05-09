@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Html;
+﻿using IpekStore.Web.Constants;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,14 @@ namespace IpekStore.Web.CustomMvcHelpers
 {
     public static class BoolToTextHelper
     {
-        public static IHtmlContent BoolToTextFor<TModel>(this IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, bool>> expression,string trueText,string falseText)
+        public static IHtmlContent BoolToTextFor<TModel>(this IHtmlHelper<TModel> htmlHelper, Expression<Func<TModel, bool>> expression)
         {
             var model = htmlHelper.ViewData.Model;
             var status= expression.Compile().Invoke(model);
             if (status)
-                return new HtmlString(trueText);
+                return new HtmlString(ViewConstants.STATUS_ACTIVE_TEXT);
             else
-                return new HtmlString(falseText);
+                return new HtmlString(ViewConstants.STATUS_PASSIVE_TEXT);
         }
         
     }

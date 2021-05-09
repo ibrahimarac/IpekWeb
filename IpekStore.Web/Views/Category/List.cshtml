@@ -32,7 +32,7 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.BoolToTextFor(m => item.Status, "Aktif", "Pasif")
+                    @Html.BoolToTextFor(m => item.Status)
                 </td>
                 <td>
                     <a asp-controller="Category"
@@ -56,6 +56,10 @@
         }
     </tbody>
 </table>
+
+<!--ViewComponents-->
+
+<!--PartialView-->
 
 @section Scripts{
     <script>

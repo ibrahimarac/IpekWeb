@@ -54,8 +54,11 @@ namespace IpekStore.Web.Controllers
             });
             _context.SaveChanges();
 
+            TempData["success"] = "<b>Kategori</b> başarıyla eklendi.";
+           
             return RedirectToAction("List");
         }
+
 
         public IActionResult Edit(int? id)
         {
@@ -96,7 +99,7 @@ namespace IpekStore.Web.Controllers
         }
 
         [HttpPost]
-        public JsonResult Delete([FromBody] JDeleteObject objToDelete)
+        public IActionResult Delete([FromBody] JDeleteObject objToDelete)
         {
             if (!objToDelete.Id.HasValue)
                 return Json(new JResult
@@ -114,7 +117,7 @@ namespace IpekStore.Web.Controllers
 
             _context.Categories.Remove(categoryInDb);
             _context.SaveChanges();
-
+            
             return Json(new JResult
             {
                 Status = Status.Ok,

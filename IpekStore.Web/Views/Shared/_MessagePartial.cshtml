@@ -1,0 +1,15 @@
+﻿
+@{
+    if (TempData["success"] != null)
+    {
+        <script>
+          $.ShowSuccess('@Html.Raw(TempData["success"])')
+        </script>
+    }
+    else if (TempData["error"] != null)
+    {
+        <script>
+          $.ShowError('@Html.Raw(TempData["error"])')
+        </script>
+    }
+}

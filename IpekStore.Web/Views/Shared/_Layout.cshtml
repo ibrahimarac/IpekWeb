@@ -59,6 +59,8 @@
 
     <script src="~/js/site.js"></script>
 
+    @{ await Html.RenderPartialAsync("_MessagePartial"); }
+
 
     @await RenderSectionAsync("Scripts", required: false)
 

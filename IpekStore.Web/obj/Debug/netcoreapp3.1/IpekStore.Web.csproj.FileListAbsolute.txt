@@ -510,3 +510,4 @@ D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\bin\Debug\n
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\IpekStore.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MessagePartial.cshtml.g.cs

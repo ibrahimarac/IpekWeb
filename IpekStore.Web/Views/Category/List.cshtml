@@ -61,22 +61,24 @@
     <script>
         $().ready(function () {
             $(".delete").click(function () {
-                var deleteId = $(this).data('id');
-                $.ajax({
-                    type: "POST",
-                    url: '@Url.Action("Delete","Category")',
-                    contentType: "application/json",
-                    dataType: "json",
-                    data: JSON.stringify({
-                        id: deleteId
-                    }),
-                    success: function (result) {
-                        console.log(result);
+                var deleteButton = $(this);
+                $.AjaxTableDelete(
+                    '@Url.Action("Delete","Category")',
+                    'Kategori silenecek. Devam etmek ister misiniz?',
+                    $(this).data('id'),
+                    function (result) {
+                        if (result.status == STATUS.Ok) {
+                            $.ShowSuccess(result.result.name + ' isimli kategori silindi')
+                            $(deleteButton).parent().parent().hide(400, function () {
+                                $(this).remove();
+                            });
+                        }
+                        else {
+                            $.ShowError('Silme işlemi esnasında bir hata oluştu.<br/>' + result.Message);
+                        }
                     }
+                )
             });
-
-            })
-
         })
     </script>
 }

@@ -1,20 +1,17 @@
-﻿using IpekStore.Web.DbMappings;
-using IpekStore.Web.Models.Entities;
-using IpekStore.Web.Seeder;
+﻿
+using IpekStore.Core.Domain.Entities;
+using IpekStore.Data.Sql.DbMappings;
+using IpekStore.Data.Sql.Seeder;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace IpekStore.Web.Context
+namespace IpekStore.Data.Sql
 {
     public class IpekContext:DbContext
     {
         public IpekContext(DbContextOptions opt)
             :base(opt)
         {
-            Database.EnsureCreated();
+
         }
 
         public DbSet<Category> Categories { get; set; }
@@ -27,6 +24,8 @@ namespace IpekStore.Web.Context
             modelBuilder.ApplyConfiguration(new CategoryMapping());
             //ProductMapping
             modelBuilder.ApplyConfiguration(new ProductMapping());
+
+            //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             //Category Data Seeding
             modelBuilder.SeedCategories();

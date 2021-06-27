@@ -1,4 +1,4 @@
-﻿using IpekStore.Web.Models.Entities;
+﻿using IpekStore.Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IpekStore.Web.DbMappings
+namespace IpekStore.Data.Sql.DbMappings
 {
-    public class ProductMapping : AuditableEntityMapping<Product>
+    public class ProductMapping : BaseEntityMapping<Product>
     {
         public override void Configure(EntityTypeBuilder<Product> builder)
         {
@@ -28,6 +28,25 @@ namespace IpekStore.Web.DbMappings
                 .HasOne(p => p.Category)
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId);
+
+            builder.Property(p => p.CreateUser)
+               .HasColumnType("varchar(10)")
+               .HasColumnName("CreatedBy")
+               .IsRequired();
+
+            builder.Property(p => p.LastupUser)
+                .HasColumnType("varchar(10)")
+                .HasColumnName("UpdatedBy")
+                .IsRequired();
+
+            builder.Property(p => p.LastupDate)
+                .HasColumnName("Updated");
+
+            builder.Property(p => p.CreateDate)
+                .HasColumnName("Created");
+
+            builder.Property(p => p.IsActive)
+                .HasColumnName("Active");
 
             builder
                 .ToTable("Products");

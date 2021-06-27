@@ -1,11 +1,11 @@
-﻿using IpekStore.Web.Models.Entities;
+﻿using IpekStore.Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IpekStore.Web.Seeder
+namespace IpekStore.Data.Sql.Seeder
 {
     public static class ProductSeeder
     {

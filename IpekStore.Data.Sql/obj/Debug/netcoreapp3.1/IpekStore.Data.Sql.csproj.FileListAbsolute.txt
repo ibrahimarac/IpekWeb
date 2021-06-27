@@ -1,0 +1,4 @@
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Data.Sql\bin\Debug\netcoreapp3.1\IpekStore.Core.dll
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Data.Sql\obj\Debug\netcoreapp3.1\IpekStore.Data.Sql.csprojAssemblyReference.cache
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Data.Sql\obj\Debug\netcoreapp3.1\IpekStore.Data.Sql.AssemblyInfoInputs.cache
+D:\Kurslar\16 Ocak\16. Hafta\Uygulamalar\IpekStore.Web\IpekStore.Data.Sql\obj\Debug\netcoreapp3.1\IpekStore.Data.Sql.AssemblyInfo.cs

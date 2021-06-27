@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj": {}
+    "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Data.Sql\\IpekStore.Data.Sql.csproj": {}
   },
   "projects": {
-    "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj": {
+    "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Data.Sql\\IpekStore.Data.Sql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
-        "projectName": "IpekStore.Web",
-        "projectPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\IpekStore.Web.csproj",
+        "projectUniqueName": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Data.Sql\\IpekStore.Data.Sql.csproj",
+        "projectName": "IpekStore.Data.Sql",
+        "projectPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Data.Sql\\IpekStore.Data.Sql.csproj",
         "packagesPath": "C:\\Users\\Ibrahim\\.nuget\\packages\\",
-        "outputPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Web\\obj\\",
+        "outputPath": "D:\\Kurslar\\16 Ocak\\16. Hafta\\Uygulamalar\\IpekStore.Web\\IpekStore.Data.Sql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,30 +42,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "FluentValidation.AspNetCore": {
-              "target": "Package",
-              "version": "[10.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.5, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -77,9 +53,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

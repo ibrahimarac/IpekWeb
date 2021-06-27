@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpekStore.Web", "IpekStore.Web\IpekStore.Web.csproj", "{C13C6576-7BD5-43C7-91C2-990A44E32805}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpekStore.Web", "IpekStore.Web\IpekStore.Web.csproj", "{C13C6576-7BD5-43C7-91C2-990A44E32805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpekStore.Core", "IpekStore.Core\IpekStore.Core.csproj", "{43D81E3E-60D8-4DE6-8BC5-106A5CA0DBBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpekStore.Data.Sql", "IpekStore.Data.Sql\IpekStore.Data.Sql.csproj", "{53E92423-F730-4248-9623-B856EB167FAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpekStore.Services", "IpekStore.Services\IpekStore.Services.csproj", "{298E847C-7660-483B-B0D5-391689FC4873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpekStore.Utils", "IpekStore.Utils\IpekStore.Utils.csproj", "{11F294A1-00D3-4197-B5F1-F7D606613E60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{C13C6576-7BD5-43C7-91C2-990A44E32805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C13C6576-7BD5-43C7-91C2-990A44E32805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C13C6576-7BD5-43C7-91C2-990A44E32805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D81E3E-60D8-4DE6-8BC5-106A5CA0DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D81E3E-60D8-4DE6-8BC5-106A5CA0DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D81E3E-60D8-4DE6-8BC5-106A5CA0DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D81E3E-60D8-4DE6-8BC5-106A5CA0DBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E92423-F730-4248-9623-B856EB167FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E92423-F730-4248-9623-B856EB167FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E92423-F730-4248-9623-B856EB167FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E92423-F730-4248-9623-B856EB167FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298E847C-7660-483B-B0D5-391689FC4873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298E847C-7660-483B-B0D5-391689FC4873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298E847C-7660-483B-B0D5-391689FC4873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298E847C-7660-483B-B0D5-391689FC4873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F294A1-00D3-4197-B5F1-F7D606613E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F294A1-00D3-4197-B5F1-F7D606613E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F294A1-00D3-4197-B5F1-F7D606613E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F294A1-00D3-4197-B5F1-F7D606613E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
